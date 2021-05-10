@@ -1,3 +1,5 @@
+# clean first
+function damage:classes/main/clean
 
 # set up scoreboard variables
 # hit_by : record the damage dealer UID when damage is dealt

@@ -6,5 +6,5 @@ scoreboard objectives remove UID
 scoreboard objectives remove poison_buffer
 scoreboard objectives remove damage_timer
 
-# disable itself
-datapack disable "file/Damage-Datapack-Squid-Workshop-1.16.5"
+# remove rags
+tag @a remove uid
