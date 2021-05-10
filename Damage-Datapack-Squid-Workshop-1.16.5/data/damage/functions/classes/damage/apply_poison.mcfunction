@@ -1,4 +1,4 @@
-effect give @s minecraft:poison 1 1
+effect give @s minecraft:poison 1 1 true
 tag @s add poison_buffer
 scoreboard players remove @s damage 1
 

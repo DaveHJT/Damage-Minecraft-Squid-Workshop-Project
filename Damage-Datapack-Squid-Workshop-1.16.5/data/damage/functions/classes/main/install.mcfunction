@@ -1,3 +1,4 @@
+
 # set up scoreboard variables
 scoreboard objectives add damage dummy
 scoreboard objectives add health health
@@ -18,3 +19,4 @@ tag @a remove uid
 
 #message
 tellraw @a {"text":"[Server: Damage-Datapack from Squid-Workshop Loaded]","italic":true,"color":"gray"}
+

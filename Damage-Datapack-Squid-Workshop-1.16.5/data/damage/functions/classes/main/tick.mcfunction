@@ -26,3 +26,4 @@ execute as @e[scores={health=1}] run function damage:classes/damage/clear_poison
 # damage buffer
 scoreboard players add @e damage_buffer 0
 scoreboard players remove @e[scores={damage_buffer=1..}] damage_buffer 1
+# execute as @e[scores={damage_buffer=1}] run function damage:classes/damage/clear_damage_buffer

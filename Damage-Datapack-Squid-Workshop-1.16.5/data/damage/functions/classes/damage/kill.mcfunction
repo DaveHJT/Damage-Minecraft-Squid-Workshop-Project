@@ -1,5 +1,3 @@
-#/from MGS_2.0.1 gun mod/
-
 # kill player without default message
 gamerule showDeathMessages false
 kill @s
