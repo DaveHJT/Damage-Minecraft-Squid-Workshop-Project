@@ -19,6 +19,10 @@ execute as @a[scores={damage=1..,health=1..},tag=!damaged] at @s run function da
 # poison_buffer
 scoreboard players add @e[tag=poison_buffer] poison_buffer 1
 # already dealt 1 damage with poison, so remove buffer
-execute as @e[scores={poison_buffer=20..}] run function damage:classes/damage/clear_poison_buffer
+execute as @e[scores={poison_buffer=10..}] run function damage:classes/damage/clear_poison_buffer
 # or if health is only 1, poison will not be effective 
 execute as @e[scores={health=1}] run function damage:classes/damage/clear_poison_buffer
+
+# damage buffer
+scoreboard players add @e damage_buffer 0
+scoreboard players remove @e[scores={damage_buffer=1..}] damage_buffer 1
