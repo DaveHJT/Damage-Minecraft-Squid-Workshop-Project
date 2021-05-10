@@ -8,16 +8,14 @@ tag @a[tag=respawn] remove dead
 tag @a[scores={health=0}] add dead
 
 scoreboard players set @a[tag=respawn] damage 0
+
+# clear the absorption if the damage is already dealt
+effect clear @a[tag=damaged] absorption
+
 tag @a[tag=damaged] remove damaged
 
 # if damage is fully dealt, hit_by is 0
 scoreboard players set @a[scores={damage=0}] hit_by 0
-
-# clear the absorption if the damage is already dealt
-effect clear @a[scores={damage_timer=0,damage_buffer=1..}] absorption
-
-# clear damage buffer if the damage is already dealt (timer is 0)
-scoreboard players set @a[scores={damage_timer=0,damage_buffer=1..}] damage_buffer 0
 
 
 
