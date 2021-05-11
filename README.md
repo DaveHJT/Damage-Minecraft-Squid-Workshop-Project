@@ -1,6 +1,6 @@
 
 # Damage-Datapack-Minecraft-Squid-Workshop
-A minecraft library for custom instant damage.
+A minecraft datapack library for a custom damage system, including custom death message and pvp kills count.
 
 ## Abstract
 As we all know, custom damage has always been a pain for datapack developers, since minecraft only provided very high level API such as instant_damage, poison and wither effects,bu the damage amount cannot be customized, and these effects cannot be accumulated in a single tick. The only low level API that can be accessed by commands----attribute, is useful for editing mobs' health, but it's read-only for players.
@@ -45,8 +45,8 @@ When the damage score is added:
 can trigger custom death messages if the player is killed by this damage.
 
 #### PVP Kills Count
-The datapack counts all the pvp kills by both original damage system and the damage system of this datapack.
-The score is in scoreboard "Kills".
+The datapack counts all the pvp kills by both original damage system and this custom damage system.
+The scores are in scoreboard "Kills".
 Rules:
 1. If suicide, your Kills score will be reduced by 1.
 2. If killing another player that the "team" score is not 0 and it's the same as you, you killed a teammate and your Kills score will be reduced by 1.
