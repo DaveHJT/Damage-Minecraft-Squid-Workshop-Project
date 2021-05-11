@@ -68,11 +68,11 @@ can trigger custom death messages if the player is killed by this damage.
 | --- | :------ |
 | default | @s was killed under @p[tag=killer]'s gunfire
 | suicide | That was a suicide
-| teamkill | @p[tag=killer] just killed their teammate.
-| guess killer | @p[tag=killer] claimed this kill.
+| teamkill | @p[tag=killer] just killed their teammate
+| guess killer | @p[tag=killer] claimed that kill
 | tag=exploded | @s was blown up by @p[tag=killer]
-| tag=turreted | @s was shot by @p[tag=killer]s turret"
-| tag=onfire | @s was burnt to death by @p[tag=killer]'s molotov
+| tag=turreted | @s was shot by @p[tag=killer]s turret
+| tag=molotoved | @s was burnt to death by @p[tag=killer]'s molotov
 | tag=grenaded | @s was blown up by @p[tag=killer]'s grenade
 
 Welcome to contribute to this datapack by adding more tag/message pairs! See [CONTRIBUTIING.md](https://github.com/DaveHJT/Damage-Datapack-Minecraft-Squid-Workshop/blob/main/CONTRIBUTING.md)
