@@ -6,10 +6,10 @@ A minecraft datapack library for a custom damage system, including custom death 
 - [Installation](#installation)
 - [Usage](#Usage)
 - [Incompactibility](#Incompactibility)
-- [How it works](#How_it_works)
-- [Project Tree](#Project)
-- [Terms of Use](#Terms)
-- [More About Squid Workshop](#More)
+- [How it works](#How-it-works)
+- [Project Tree](#Project-Tree)
+- [Terms of Use](#Terms-of-Use)
+- [More About Squid Workshop](#More-About-Squid-Workshop)
 
 # Abstract
 As we all know, custom damage has always been a pain for datapack developers, since minecraft only provided very high level API such as instant_damage, poison and wither effects,bu the damage amount cannot be customized, and these effects cannot be accumulated in a single tick. The only low level API that can be accessed by commands----attribute, is useful for editing mobs' health, but it's read-only for players.
