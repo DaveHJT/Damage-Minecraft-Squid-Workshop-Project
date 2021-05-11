@@ -12,9 +12,6 @@ execute as @s[scores={damage_timer=0,damage=6..}] run function damage:classes/da
 execute as @s[scores={damage_timer=0,damage=4..}] run function damage:classes/damage/enum/4
 execute as @s[scores={damage_timer=0,damage=2..}] run function damage:classes/damage/enum/2
 
-# if damage >= 2 deal damage until damage <= 1
-# execute if entity @s[scores={damage=2..}] run function damage:classes/damage/hurt_until_damage1
-
 # if damage = 1 give 1 damage poison
 execute if entity @s[scores={damage_timer=0,damage=1}] run function damage:classes/damage/damage1_poison
 

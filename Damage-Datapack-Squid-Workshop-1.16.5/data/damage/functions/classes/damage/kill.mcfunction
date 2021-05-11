@@ -40,9 +40,9 @@ execute if score @s UID = @p[tag=killer] UID run tag @s add suicide
 scoreboard players remove @s[tag=suicide] Kills 2
 execute if entity @s[tag=suicide] run tellraw @a ["",{"text":"That was a suicide"}]
 
-#team kill
-execute if score @s[tag=!suicide] team = @p[tag=killer] team run scoreboard players remove @p[tag=killer] Kills 2
-execute if score @s[tag=!suicide] team = @p[tag=killer] team run tellraw @a ["",{"selector":"@p[tag=killer]"},{"text":" just killed his teammate"}]
+#team kill : set the team 
+execute unless score @s team matches 0 if score @s[tag=!suicide] team = @p[tag=killer] team run scoreboard players remove @p[tag=killer] Kills 2
+execute unless score @s team matches 0 if score @s[tag=!suicide] team = @p[tag=killer] team run tellraw @a ["",{"selector":"@p[tag=killer]"},{"text":" just killed his teammate"}]
 
 
 # clean tags

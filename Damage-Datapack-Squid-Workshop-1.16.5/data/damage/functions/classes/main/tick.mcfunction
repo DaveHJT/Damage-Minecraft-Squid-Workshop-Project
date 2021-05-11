@@ -1,6 +1,9 @@
 # update uid for new player
 execute as @a[tag=!uid] run function damage:classes/damage/update_uid
 
+# update health
+execute as @a store result score @s health run data get entity @s Health 1
+
 # update status
 tag @a[tag=respawn] remove respawn
 tag @a[tag=dead,scores={health=1..}] add respawn
@@ -15,7 +18,7 @@ effect clear @a[tag=damaged] absorption
 tag @a[tag=damaged] remove damaged
 
 # if damage is fully dealt, hit_by is 0
-scoreboard players set @a[scores={damage=0}] hit_by 0
+scoreboard players set @a[scores={damage=0},tag=!poison_buffer] hit_by 0
 
 
 
