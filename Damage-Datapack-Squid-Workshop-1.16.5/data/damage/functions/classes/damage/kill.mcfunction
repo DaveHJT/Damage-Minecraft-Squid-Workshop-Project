@@ -8,7 +8,7 @@ scoreboard players operation hitter hit_by = @s hit_by
 execute as @a if score @s UID = hitter hit_by run tag @s add killer
 
 # if hitter unknown, guess killer by the nearest player
-execute if score @s hit_by matches 0 run tag @s add guess_killer
+execute if score guess_killer damage_setting matches 1 if score @s hit_by matches 0 run tag @s add guess_killer
 execute if entity @s[tag=guess_killer] run tag @p[tag=!dead] add killer
 execute if entity @s[tag=guess_killer] run say I guess that is my kill.
 
@@ -34,6 +34,7 @@ execute if entity @s[tag=!messaged] if entity @p[tag=killer] run tellraw @a ["",
 # clean up death tag
 function damage:classes/damage/remove_death_tag
 
+# count kills
 scoreboard players add @p[tag=killer] Kills 1
 #suicide
 execute if score @s UID = @p[tag=killer] UID run tag @s add suicide
