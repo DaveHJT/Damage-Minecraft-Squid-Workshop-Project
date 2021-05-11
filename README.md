@@ -151,8 +151,8 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 			    tick.json
 
 # Terms of Use
-Feel free to play around with this datapack.
-As developer, deel free to use this datapack as a module.
+Feel free to play around with this datapack. \
+As developer, deel free to use this datapack as a module. \
 But you **must** add the link to this github page!
 ## License
 [Mozilla Public License 2.0](https://github.com/DaveHJT/Damage-Datapack-Minecraft-Squid-Workshop/blob/main/LICENSE)
