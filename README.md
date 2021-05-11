@@ -30,6 +30,6 @@ Enable it by:
 ## Usage
 In game, add the damge score to the entity(player or mobs) you want to give damage to by:
 
-  /scoreboard players add damage 10
+  	/scoreboard players add damage 10
   
 You can change 10 to any amount of damage, note that player has health of 20.
