@@ -32,4 +32,4 @@ In game, add the damge score to the entity(player or mobs) you want to give dama
 
   	/scoreboard players add damage 10
   
-You can change 10 to any amount of damage, note that player has health of 20.
+You can change 10 to any amount of damage(positive integer), note that player has health of 20.
