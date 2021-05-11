@@ -23,8 +23,8 @@ scoreboard players set @a[scores={damage=0},tag=!poison_buffer] hit_by 0
 
 
 # deal damage
-execute as @e[type=#damage:mob,scores={damage=1..}] at @s run function damage:classes/damage/deal_damage
-execute as @e[type=#damage:boss,scores={damage=1..}] at @s run function damage:classes/damage/deal_damage
+execute as @e[type=#damage:mob,scores={damage=1..}] at @s run function damage:classes/damage/damage_mob
+execute as @e[type=#damage:boss,scores={damage=1..}] at @s run function damage:classes/damage/damage_mob
 execute as @a[scores={damage=1..,health=1..,},tag=!damaged,gamemode=!creative,gamemode=!spectator] at @s run function damage:classes/damage/deal_damage
 
 
