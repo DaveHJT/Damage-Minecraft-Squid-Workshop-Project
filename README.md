@@ -5,9 +5,9 @@ A minecraft datapack library for a custom damage system, including custom death 
 - [Abstract](#Abstract)
 - [Installation](#installation)
 - [Usage](#Usage)
-- [Incompactibility](#Incompactibility)
 - [How it works](#How-it-works)
 - [Project Tree](#Project-Tree)
+- [Incompactibility](#Incompactibility)
 - [Terms of Use](#Terms-of-Use)
 - [More About Squid Workshop](#More-About-Squid-Workshop)
 
@@ -72,12 +72,6 @@ Rules:
 1. If suicide, your Kills score will be reduced by 1.
 2. If killing another player that the "team" score is not 0 and it's the same as you, you killed a teammate and your Kills score will be reduced by 1.
 3. If killed by custom damage but "hit_by" score is not assigned to the damage applyer's UID, the system guess you are killed by the nearest player.
-
-# Incompactibility
-* This datapack uses absorption effect as helper, so that adding the damage score to any entity(player or mobs) that has absorption effect may cause:
-	1. less damage than the damage score is dealt
-	2. the absorption effect might be cleared
-* Using other datapacks not from Squid Workshop that contains the same scoreboard or tags name as this datapack in code may cause undefined behaviour.
 
 # How it works
 
@@ -149,6 +143,13 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 		    └─functions
 			    load.json
 			    tick.json
+
+# Incompactibility
+* This datapack uses absorption effect as helper, so that adding the damage score to any entity(player or mobs) that has absorption effect may cause:
+	1. less damage than the damage score is dealt
+	2. the absorption effect might be cleared
+* Using other datapacks not from Squid Workshop that contains the same scoreboard or tags name as this datapack in code may cause undefined behaviour.
+
 
 # Terms of Use
 Feel free to play around with this datapack. \
