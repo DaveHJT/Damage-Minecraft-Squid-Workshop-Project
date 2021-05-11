@@ -44,6 +44,18 @@ When the damage score is added:
 2. Assign the damage taker's hit_by score by the damage applyer's UID(unique player ID created by this datapack)
 can trigger custom death messages if the player is killed by this damage.
 
+| Condition | Death Message |
+| --- | :------ |
+| default | @s was killed under @p[tag=killer]'s gunfire
+| suicide | That was a suicide
+| teamkill | @p[tag=killer] just killed their teammate.
+| tag=exploded | @s was blown up by @p[tag=killer]
+| tag=turreted | @s was shot by @p[tag=killer]s turret"
+| tag=onfire | @s was burnt to death by @p[tag=killer]'s molotov
+| tag=grenaded | @s was blown up by @p[tag=killer]'s grenade
+
+Welcome to contribute to this datapack by adding more tag/message pairs! See [CONTRIBUTIING.md](https://github.com/DaveHJT/Damage-Datapack-Minecraft-Squid-Workshop/blob/main/CONTRIBUTING.md)
+
 #### PVP Kills Count
 The datapack counts all the pvp kills by both original damage system and this custom damage system.
 The scores are in scoreboard "Kills".
@@ -61,8 +73,83 @@ Rules:
 ## How it works
 
 ## Project Tree
+See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/master/CONTRIBUTING.md) for our standard datapack structure and how this structure works.
+	Damage-Datapack-Squid-Workshop-1.16.5/
+	│  pack.mcmeta
+	│  pack.png
+	│
+	└─data
+	    ├─damage
+	    │  ├─functions
+	    │  │  ├─classes
+	    │  │  │  ├─damage
+	    │  │  │  │  │  apply_poison.mcfunction
+	    │  │  │  │  │  clear_damage_buffer.mcfunction
+	    │  │  │  │  │  clear_poison_buffer.mcfunction
+	    │  │  │  │  │  combine_poison_buffer.mcfunction
+	    │  │  │  │  │  damage1_poison.mcfunction
+	    │  │  │  │  │  deal_damage.mcfunction
+	    │  │  │  │  │  deal_damage_mob.mcfunction
+	    │  │  │  │  │  hurt.mcfunction
+	    │  │  │  │  │  hurt_until_damage1.mcfunction
+	    │  │  │  │  │  kill.mcfunction
+	    │  │  │  │  │  remove_death_tag.mcfunction
+	    │  │  │  │  │  update_uid.mcfunction
+	    │  │  │  │  │
+	    │  │  │  │  └─enum
+	    │  │  │  │          12.mcfunction
+	    │  │  │  │          16.mcfunction
+	    │  │  │  │          2.mcfunction
+	    │  │  │  │          20.mcfunction
+	    │  │  │  │          24.mcfunction
+	    │  │  │  │          32.mcfunction
+	    │  │  │  │          4.mcfunction
+	    │  │  │  │          48.mcfunction
+	    │  │  │  │          6.mcfunction
+	    │  │  │  │          8.mcfunction
+	    │  │  │  │          96.mcfunction
+	    │  │  │  │
+	    │  │  │  └─main
+	    │  │  │          clean.mcfunction
+	    │  │  │          load.mcfunction
+	    │  │  │          tick.mcfunction
+	    │  │  │
+	    │  │  └─ui
+	    │  │      │  unload.mcfunction
+	    │  │      │
+	    │  │      └─setting
+	    │  │          ├─boss_difficulty
+	    │  │          │      default.mcfunction
+	    │  │          │      hard.mcfunction
+	    │  │          │      medium.mcfunction
+	    │  │          │
+	    │  │          └─guess_killer
+	    │  │                  disable.mcfunction
+	    │  │                  enable.mcfunction
+	    │  │
+	    │  └─tags
+	    │      └─entity_types
+	    │              boss.json
+	    │              mob.json
+	    │              notmob.json
+	    │              undead.json
+	    │
+	    └─minecraft
+		└─tags
+		    └─functions
+			    load.json
+			    tick.json
 
 ## Terms of Use
+Feel free to play around with this datapack.
+As developer, deel free to use this datapack as a module.
+But you **must** add the link to this github page!
+### License
+[Mozilla Public License 2.0](https://github.com/DaveHJT/Damage-Datapack-Minecraft-Squid-Workshop/blob/main/LICENSE)
 
-## More About Us
+## More About Squid Workshop
+See more datapacks developed by us [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject)
+Watch our videos on bilibili [here](https://space.bilibili.com/649645265?from=search&seid=778816111336987286)
+Join our QQ group: 74681732
+Subscribe on wechat: 鱿鱼MC工作室
 
