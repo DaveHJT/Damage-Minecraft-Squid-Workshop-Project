@@ -45,6 +45,10 @@ Enable it by:
 You can change 10 to any amount of damage(positive integer), note that player has health of 20.
 
 * In-game command list
+	* all the user commands are under 
+
+		function gun:ui/...
+
 | Description | Command |
 | --- | :------ |
 | display this list | /function damage:ui/help
