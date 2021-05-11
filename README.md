@@ -5,9 +5,9 @@ A minecraft datapack library for a custom damage system, including custom death 
 - [Abstract](#Abstract)
 - [Installation](#installation)
 - [Usage](#Usage)
+- [Incompactibility](#Incompactibility)
 - [How it works](#How-it-works)
 - [Project Tree](#Project-Tree)
-- [Incompactibility](#Incompactibility)
 - [Terms of Use](#Terms-of-Use)
 - [More About Squid Workshop](#More-About-Squid-Workshop)
 
@@ -38,12 +38,19 @@ Enable it by:
   
 # Usage
 ## Simple
-In game, add the damge score to the entity(player or mobs) you want to give damage to by:
+* In game, add the damge score to the entity(player or mobs) you want to give damage to by:
 
   	/scoreboard players add damage 10
   
 You can change 10 to any amount of damage(positive integer), note that player has health of 20.
 
+* In-game command list
+| Description | Command |
+| --- | :------ |
+| display this list | /function damage:ui/help
+| clean up and disable the datapack | /function damage:ui/unload
+| change the damage against boss | /function damage:ui/setting/boss_difficulty/...
+| enable/disable gussing unknown killer by nearest player | /function damage:ui/setting/guess_killer/...
 
 ## Advanced
 Datapack developers might want to read this part.
@@ -71,7 +78,13 @@ The scores are in scoreboard "Kills".
 Rules:
 1. If suicide, your Kills score will be reduced by 1.
 2. If killing another player that the "team" score is not 0 and it's the same as you, you killed a teammate and your Kills score will be reduced by 1.
-3. If killed by custom damage but "hit_by" score is not assigned to the damage applyer's UID, the system guess you are killed by the nearest player.
+3. If killed by custom damage but "hit_by" score is not assigned to the damage applyer's UID, the system guess you are killed by the nearest player(no team > different team > teammate).
+
+# Incompactibility
+* This datapack uses absorption effect as helper, so that adding the damage score to any entity(player or mobs) that has absorption effect may cause:
+	1. less damage than the damage score is dealt
+	2. the absorption effect might be cleared
+* Using other datapacks not from Squid Workshop that contains the same scoreboard or tags name as this datapack in code may cause undefined behaviour.
 
 # How it works
 
@@ -144,19 +157,10 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 			    load.json
 			    tick.json
 
-# Incompactibility
-* This datapack uses absorption effect as helper, so that adding the damage score to any entity(player or mobs) that has absorption effect may cause:
-	1. less damage than the damage score is dealt
-	2. the absorption effect might be cleared
-* Using other datapacks not from Squid Workshop that contains the same scoreboard or tags name as this datapack in code may cause undefined behaviour.
-
-
 # Terms of Use
 Feel free to play around with this datapack. \
-As developer, deel free to use this datapack as a module to build your free datapack. \
-But you **must** add the link to this github page! \
-**NO COMMERCIAL USE** 
-
+As developer, deel free to use this datapack as a module. \
+But you **must** add the link to this github page!
 ## License
 [Mozilla Public License 2.0](https://github.com/DaveHJT/Damage-Datapack-Minecraft-Squid-Workshop/blob/main/LICENSE)
 
