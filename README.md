@@ -74,6 +74,7 @@ Rules:
 
 ## Project Tree
 See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/master/CONTRIBUTING.md) for our standard datapack structure and how this structure works.
+
 	Damage-Datapack-Squid-Workshop-1.16.5/
 	│  pack.mcmeta
 	│  pack.png
@@ -148,8 +149,8 @@ But you **must** add the link to this github page!
 [Mozilla Public License 2.0](https://github.com/DaveHJT/Damage-Datapack-Minecraft-Squid-Workshop/blob/main/LICENSE)
 
 ## More About Squid Workshop
-See more datapacks developed by us [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject)
-Watch our videos on bilibili [here](https://space.bilibili.com/649645265?from=search&seid=778816111336987286)
-Join our QQ group: 74681732
-Subscribe on wechat: 鱿鱼MC工作室
+See more datapacks developed by us [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject) \
+Watch our videos on bilibili [here](https://space.bilibili.com/649645265?from=search&seid=778816111336987286) \
+Join our QQ group: 74681732 \
+Subscribe on wechat: 鱿鱼MC工作室 
 
