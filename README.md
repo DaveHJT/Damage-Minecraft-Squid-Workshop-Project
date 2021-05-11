@@ -6,7 +6,7 @@ A minecraft datapack library for a custom damage system, including custom death 
 - [Installation](#installation)
 - [Usage](#Usage)
 - [Incompactibility](#Incompactibility)
-- [How it works](#How)
+- [How it works](#How_it_works)
 - [Project Tree](#Project)
 - [Terms of Use](#Terms)
 - [More About Squid Workshop](#More)
