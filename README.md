@@ -40,9 +40,10 @@ Enable it by:
 ## Simple
 * In game, add the damge score to the entity(player or mobs) you want to give damage to by:
 
-  		/scoreboard players add damage 10
+  		/scoreboard players add @s damage 10
   
-	You can change 10 to any amount of damage(positive integer), note that player has health of 20.
+	You can change 10 to any amount of damage(positive integer), note that player has health of 20. \
+	Change to @s to any player or mobs you want to deal damage on.
 
 * In-game command list
 	* all the user commands are under 
@@ -58,6 +59,14 @@ Enable it by:
 
 ## Advanced
 Datapack developers might want to read this part.
+
+PS: To make the custom death message and PVP kills count work in teams, you need to manually set the "team" scores of the players in the same team the same. Team score of 0 means no team.
+
+eg. PLAYER1 and PLAYER2 are in the same team
+
+	/scoreboard players set PLAYER1 team 1
+	/scoreboard players set PLAYER2 team 1
+
 ### Custom Death Message
 When the damage score is added:
 1. Tag the damage taker the following tags
