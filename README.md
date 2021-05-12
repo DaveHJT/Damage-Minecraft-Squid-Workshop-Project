@@ -88,7 +88,7 @@ Rules:
 # How it works
 * In minecraft command system (mcfunction), we can use:
 	* /data to modify the health of mobs directly, we use this method in this datapack, but player's Health nbt attribute is read-only.
-	 * /atrribute to modify the max health of player, theoratically it can be used to clamp the player's health to a specific lower amount. However, the max health attribute is only updated at the end of the tick, so we need two ticks for editing player's health, aby health boost in the first tick will be dropped, so this method is not practical.
+	 * /atrribute to modify the max health of player, theoratically it can be used to clamp the player's health to a specific lower amount. However, the max health attribute is only updated at the end of the tick, so we need two ticks for editing player's health, and any health boost in the first tick will be dropped, this method is not practical.
 	 * /effect instant_damage to deal damage within a tick, but this high level API also does the following things:
  	 * disable the instant damage effect to player in about 9 ticks
  	 * can only do one instant damage effect per rick, if multiple effects are applied, only the strongest is reserved. So I tried to use recursion in code and failed
