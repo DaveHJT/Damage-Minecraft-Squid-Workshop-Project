@@ -86,6 +86,15 @@ Rules:
 3. If killed by custom damage but "hit_by" score is not assigned to the damage applyer's UID, the system guess you are killed by the nearest player(no team > different team > teammate).
 
 # How it works
+* In minecraft command system (mcfunction), we can use:
+ * /data to modify the health of mobs directly, we use this method in this datapack, but player's Health nbt attribute is read-only.
+ * /atrribute to modify the max health of player, theoratically it can be used to clamp the player's health to a specific lower amount. However, the max health attribute is only updated at the end of the tick, so we need two ticks for editing player's health, aby health boost in the first tick will be dropped, so this method is not practical.
+ * /effect instant_damage to deal damage within a tick, but this high level API also does the following things:
+  * disable the instant damage effect to player in about 9 ticks
+  * can only do one instant damage effect per rick, if multiple effects are applied, only the strongest is reserved. So I tried to use recursion in code and failed
+  * can only deal damge of the multiple of 6, eg. 6, 12 ,24, 48...
+  * /effect instant_health is just the reverse of instant damage, and it gives player health that is the multiples of 4.
+  * However, when using instant_health and instant_damage in the same tick, the final health after this tick is only affected bu the sum of the damage modifiers, eg. when the player's health is full, we can still use +4 then -6 modifiers to make a combination of -2 health effect at the end of the tick. But the problem is, if the negative health modifier is less than the player's health, eg. player's health = 20, instant_damage = -24, instant_health = 64, even if the combination of health modifiers cannot kill the player, the instant damage will still kill the player instantly because 24>20. Hence, we need to use absorption effect instead of instant health effect to tomperarily raise the player's max health, and this problem can be prevented.
 
 # Project Tree
 See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/master/CONTRIBUTING.md) for our standard datapack structure and how this structure works.
@@ -161,6 +170,7 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 * This datapack uses absorption effect as helper, so that adding the damage score to any entity(player or mobs) that has absorption effect may cause:
 	1. less damage than the damage score is dealt
 	2. the absorption effect might be cleared
+* Instant damage effect is disabled in few seconds after player respawn, this invincibility is minecraft's feature, so we keeps it as our feature.
 * Using other datapacks not from Squid Workshop that contains the same scoreboard or tags name as this datapack in code may cause undefined behaviour.
 
 
