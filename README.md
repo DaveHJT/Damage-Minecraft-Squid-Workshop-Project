@@ -40,9 +40,9 @@ Enable it by:
 ## Simple
 * In game, add the damge score to the entity(player or mobs) you want to give damage to by:
 
-  	/scoreboard players add damage 10
+  		/scoreboard players add damage 10
   
-You can change 10 to any amount of damage(positive integer), note that player has health of 20.
+	You can change 10 to any amount of damage(positive integer), note that player has health of 20.
 
 * In-game command list
 	* all the user commands are under 
