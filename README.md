@@ -90,9 +90,9 @@ Rules:
 	* /data to modify the health of mobs directly, we use this method in this datapack, but player's Health nbt attribute is read-only.
 	 * /atrribute to modify the max health of player, theoratically it can be used to clamp the player's health to a specific lower amount. However, the max health attribute is only updated at the end of the tick, so we need two ticks for editing player's health, and any health boost in the first tick will be dropped, this method is not practical.
 	 * /effect instant_damage to deal damage within a tick, but this high level API also does the following things:
- 	 * disable the instant damage effect to player in about 9 ticks
- 	 * can only do one instant damage effect per rick, if multiple effects are applied, only the strongest is reserved. So I tried to use recursion in code and failed
- 	 * can only deal damge of the multiple of 6, eg. 6, 12 ,24, 48...
+ 		 * disable the instant damage effect to player in about 9 ticks
+ 	 	* can only do one instant damage effect per rick, if multiple effects are applied, only the strongest is reserved. So I tried to use recursion in code and failed
+ 		 * can only deal damge of the multiple of 6, eg. 6, 12 ,24, 48...
  	 * /effect instant_health is just the reverse of instant damage, and it gives player health that is the multiples of 4.
  	 * When using instant_health and instant_damage in the same tick, the final health after this tick is only affected by the sum of the damage modifiers (eg. when the player's health is full, we can still use +4 then -6 modifiers to make a combination of -2 health effect at the end of the tick). But the problem is, if the negative health modifier is less than the player's health (eg. player's health = 20, instant_damage = -24, instant_health = 64), even if the combination of health modifiers cannot kill the player, the instant damage will still kill the player instantly because 24>20. Hence, we need to use absorption effect instead of instant health effect to tomperarily raise the player's max health, and this problem can be prevented.
  	 * /effect poison to deal 1 damage, the damage is dealt after this effect is applied to player, this effect cannot be overlapped as well, and the poison effect cannot deal damage to the last 1 health of player
