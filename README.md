@@ -62,11 +62,13 @@ Datapack developers might want to read this part.
 
 PS: To make the custom death message and PVP kills count work in teams, you need to manually set the "team" scores of the players in the same team the same. Team score of 0 means no team.
 
-eg. PLAYER1 and PLAYER2 are in the same team
+eg. PLAYER1 and PLAYER2 are teammates, PLAYER3 is in another team, PLAYER4 and PLAYER5 didn't join any team.
 
 	/scoreboard players set PLAYER1 team 1
 	/scoreboard players set PLAYER2 team 1
-
+	/scoreboard players set PLAYER3 team 2
+	/scoreboard players set PLAYER4 team 0
+	/scoreboard players set PLAYER5 team 0
 ### Custom Death Message
 When the damage score is added:
 1. Tag the damage taker the following tags
