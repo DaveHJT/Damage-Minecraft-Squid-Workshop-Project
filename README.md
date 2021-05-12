@@ -71,7 +71,7 @@ can trigger custom death messages if the player is killed by this damage.
 | teamkill | @p[tag=killer] just killed their teammate
 | guess killer | @p[tag=killer] claimed that kill
 | tag=exploded | @s was blown up by @p[tag=killer]
-| tag=turreted | @s was shot by @p[tag=killer]s turret
+| tag=turreted | @s was shot by @p[tag=killer]'s turret
 | tag=molotoved | @s was burnt to death by @p[tag=killer]'s molotov
 | tag=grenaded | @s was blown up by @p[tag=killer]'s grenade
 
