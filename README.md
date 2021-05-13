@@ -70,10 +70,10 @@ eg. PLAYER1 and PLAYER2 are teammates, PLAYER3 is in another team, PLAYER4 and P
 	/scoreboard players set PLAYER4 team 0
 	/scoreboard players set PLAYER5 team 0
 ### Custom Death Message
-When the damage score is added:
-1. Tag the damage taker the following tags
+When the damage score is added, you should do these to enable custom death message:
+1. Tag the damage taker the tags in list below to trigger special message
 2. Assign the damage taker's hit_by score by the damage applyer's UID(unique player ID created by this datapack)
-can trigger custom death messages if the player is killed by this damage.
+to identify the killer if the player is killed by this damage.
 
 | Condition | Death Message |
 | --- | :------ |
