@@ -1,4 +1,4 @@
-# deal 1 damage
+# deal 1 damage (not used)
 effect give @s minecraft:absorption 1 0
 effect give @s minecraft:instant_damage 1 0
 

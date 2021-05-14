@@ -11,6 +11,8 @@ tag @a[tag=respawn] remove dead
 tag @a[scores={health=0}] add dead
 
 scoreboard players set @a[tag=respawn] damage 0
+scoreboard players set @a[scores={damage=1..},gamemode=creative] damage 0
+scoreboard players set @a[scores={damage=1..},gamemode=spectator] damage 0
 
 # clear the absorption if the damage is already dealt
 effect clear @a[tag=damaged] absorption

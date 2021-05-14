@@ -40,5 +40,5 @@ scoreboard players set boss_difficulty damage_setting 0
 tag @a remove uid
 
 #message
-tellraw @a {"text":"[Server: Damage-Datapack from Squid-Workshop Loaded]","italic":true,"color":"gray"}
+tellraw @a {"text":"[Server]: Damage-Datapack from Squid-Workshop Loaded","italic":true,"color":"gray"}
 

@@ -2,6 +2,7 @@
 	"replace": false,
 	"values": [
 	"minecraft:zombie",
+	"minecraft:wither",
 	"minecraft:zombified_piglin",
 	"minecraft:zoglin",
 	"minecraft:drowned",
