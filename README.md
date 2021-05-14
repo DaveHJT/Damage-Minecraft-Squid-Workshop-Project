@@ -142,7 +142,7 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 	   │   │   │   │          12.mcfunction
 	   │   │   │   │          16.mcfunction
 	   │   │   │   │          2.mcfunction
-	   │   │   │   │          v20.mcfunction
+	   │   │   │   │          20.mcfunction
 	   │   │   │   │          24.mcfunction
 	   │   │   │   │          32.mcfunction
 	   │   │   │   │          4.mcfunction
