@@ -152,9 +152,9 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 	   │   │   │   │          96.mcfunction
 	   │   │   │   │
 	   │   │   │   └──main
-	   │   │   │         clean.mcfunction
-	   │   │   │         load.mcfunction
-	   │   │   │         tick.mcfunction
+	   │   │   │          clean.mcfunction
+	   │   │   │          load.mcfunction
+	   │   │   │          tick.mcfunction
 	   │   │   │
 	   │   │   └──ui
 	   │   │       │  unload.mcfunction
