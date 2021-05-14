@@ -161,13 +161,13 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 	    │   │       │
 	    │   │       └──setting
 	    │   │           ├──boss_difficulty
-	    │   │           │     default.mcfunction
-	    │   │           │     hard.mcfunction
-	    │   │           │     medium.mcfunction
+	    │   │           │      default.mcfunction
+	    │   │           │      hard.mcfunction
+	    │   │           │      medium.mcfunction
 	    │   │           │
 	    │   │           └──guess_killer
-	    │   │                 disable.mcfunction
-	    │   │                 enable.mcfunction
+	    │   │                  disable.mcfunction
+	    │   │                  enable.mcfunction
 	    │   │
 	    │   └──tags
 	    │       └──entity_types
