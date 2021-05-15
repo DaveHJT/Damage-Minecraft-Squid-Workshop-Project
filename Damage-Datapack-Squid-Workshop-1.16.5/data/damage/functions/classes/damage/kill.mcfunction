@@ -49,7 +49,7 @@ execute unless score @s team matches 0 if score @s[tag=!suicide] team = @p[tag=k
 
 
 # clean tags
-tag @p[tag=killer] remove killer
+tag @a[tag=killer] remove killer
 tag @s[tag=guess_killer] remove guess_killer
 tag @s[tag=messaged] remove messaged
 tag @s[tag=suicide] remove suicide
