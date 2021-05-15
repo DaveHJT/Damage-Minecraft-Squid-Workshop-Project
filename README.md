@@ -1,5 +1,5 @@
 
-# Damage-Datapack-Minecraft-Squid-Workshop
+# _Squid Workshop's_ Damage Data Pack
 A minecraft datapack library for a custom damage system, including custom death message and pvp kills count.
 
 - [Abstract](#Abstract)
