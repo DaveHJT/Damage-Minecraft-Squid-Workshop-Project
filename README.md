@@ -5,7 +5,7 @@ A minecraft datapack library for a custom damage system, including custom death 
 - [Abstract](#Abstract)
 - [Installation](#installation)
 - [Usage](#Usage)
-- [How it works](#How-it-works)
+- [How it works](#Mechanism)
 - [Project Tree](#Project-Tree)
 - [Incompactibility](#Incompactibility)
 - [Terms of Use](#Terms-of-Use)
