@@ -1,5 +1,6 @@
 # update uid for new player
-execute as @a[tag=!uid] run function damage:classes/damage/update_uid
+scoreboard players add @a UID 0
+execute as @a[scores={UID=0}] run function damage:classes/damage/update_uid
 
 # update health
 execute as @a store result score @s health run data get entity @s Health 1

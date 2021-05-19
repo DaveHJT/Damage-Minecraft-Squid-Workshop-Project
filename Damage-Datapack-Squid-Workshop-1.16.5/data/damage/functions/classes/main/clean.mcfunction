@@ -7,5 +7,3 @@ scoreboard objectives remove poison_buffer
 scoreboard objectives remove damage_timer
 scoreboard objectives remove damage_setting
 
-# remove rags
-tag @a remove uid

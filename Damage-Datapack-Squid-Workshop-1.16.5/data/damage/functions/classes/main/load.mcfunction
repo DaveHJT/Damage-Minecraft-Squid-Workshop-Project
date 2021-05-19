@@ -35,10 +35,6 @@ scoreboard players set hard damage 4
 scoreboard players set guess_killer damage_setting 1
 scoreboard players set boss_difficulty damage_setting 0
 
-
-# reset tags
-tag @a remove uid
-
 #message
 tellraw @a {"text":"[Server]: Damage-Datapack from Squid-Workshop Loaded","italic":true,"color":"gray"}
 
