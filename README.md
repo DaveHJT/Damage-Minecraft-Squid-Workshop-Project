@@ -5,7 +5,7 @@ A minecraft datapack library for a custom damage system, including custom death 
 - [Abstract](#Abstract)
 - [Installation](#installation)
 - [Usage](#Usage)
-- [How it works](#How-it-works)
+- [How it works](#Mechanism)
 - [Project Tree](#Project-Tree)
 - [Incompactibility](#Incompactibility)
 - [Terms of Use](#Terms-of-Use)
@@ -96,7 +96,7 @@ Rules:
 2. If killing another player that the "team" score is not 0 and it's the same as you, you killed a teammate and your Kills score will be reduced by 1.
 3. If killed by custom damage but "hit_by" score is not assigned to the damage applyer's UID, the system guess you are killed by the nearest player(no team > different team > teammate).
 
-# How it works
+# Mechanism
 * In minecraft command system (mcfunction), we can use:
 	* /data to modify the health of mobs directly, we use this method in this datapack, but player's Health nbt attribute is read-only.
 	 * /atrribute to modify the max health of player, theoratically it can be used to clamp the player's health to a specific lower amount. However, the max health attribute is only updated at the end of the tick, so we need two ticks for editing player's health, and any health boost in the first tick will be dropped, this method is not practical.
@@ -105,7 +105,7 @@ Rules:
  	 	* can only do one instant damage effect per rick, if multiple effects are applied, only the strongest is reserved. So I tried to use recursion in code and failed
  		 * can only deal damge of the multiple of 6, eg. 6, 12 ,24, 48...
  	 * /effect instant_health is just the reverse of instant damage, and it gives player health that is the multiples of 4.
- 	 * When using instant_health and instant_damage in the same tick, the final health after this tick is only affected by the sum of the damage modifiers, ignoring the max health (eg. when the player's health is full, we can still use +4 then -6 modifiers to make a combination of -2 health effect at the end of the tick). But the problem is, if the negative health modifier is less than the player's health (eg. player's health = 20, instant_damage = -24, instant_health = 64), even if the combination of health modifiers cannot kill the player, the instant damage will still kill the player instantly because 24>20. Hence, we need to use absorption effect instead of instant health effect to tomperarily raise the player's max health, and this problem can be avoided by this.
+ 	 * When using instant_health and instant_damage in the same tick, the final health after this tick is only affected by the sum of the damage modifiers, ignoring the max health (eg. when the player's health is full, we can still use +4 then -6 modifiers to make a combination of -2 health effect at the end of the tick). But the problem is, if the negative health modifier is less than the player's health (eg. player's health = 20, instant_damage = -24, instant_health = 64), even if the combination of health modifiers cannot kill the player, the instant damage will still kill the player instantly because 24>20. Hence, we need to use absorption effect instead of instant health effect to temperarily raise the player's max health, and this problem can be avoided by this.
  	 * /effect poison to deal 1 damage, the damage is dealt after this effect is applied to player, this effect cannot be overlapped as well, and the poison effect cannot deal damage to the last 1 health of player
  
  1. Hence we used the combination of instant damage, absorption effects to deal damage over 2. The combinations are in "damage:classes/damage/enum" folder, there are 2, 4, 6, 8, 12, 16, 20, 24... 
