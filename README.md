@@ -52,8 +52,8 @@ Enable it by:
 
 | Description | Command |
 | --- | :------ |
-| display this list | /function app:gun/help
-| clean up and disable the datapack | /function app:gun/unload
+| display this list | /function app:damage/help
+| clean up and disable the datapack | /function app:damage/unload
 | change the damage against boss | /function app:setting/boss_difficulty/...
 | enable/disable guessing unknown killer by nearest player | /function app:setting/guess_killer/...
 
