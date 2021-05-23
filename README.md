@@ -48,14 +48,14 @@ Enable it by:
 * In-game command list
 	* all the user commands are under 
 
-			function gun:ui/...
+			function app:...
 
 | Description | Command |
 | --- | :------ |
-| display this list | /function damage:ui/help
-| clean up and disable the datapack | /function damage:ui/unload
-| change the damage against boss | /function damage:ui/setting/boss_difficulty/...
-| enable/disable guessing unknown killer by nearest player | /function damage:ui/setting/guess_killer/...
+| display this list | /function app:gun/help
+| clean up and disable the datapack | /function app:gun/unload
+| change the damage against boss | /function app:setting/boss_difficulty/...
+| enable/disable guessing unknown killer by nearest player | /function app:setting/guess_killer/...
 
 ## Advanced
 Datapack developers might want to read this part.
@@ -120,67 +120,71 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 	│  pack.mcmeta
 	│  pack.png
 	│
-	└──data
-	    ├──damage
-	    │   ├──functions
-	    │   │   ├──classes
-	    │   │   │   ├──damage
-	    │   │   │   │   │  apply_poison.mcfunction
-	    │   │   │   │   │  clear_damage_buffer.mcfunction
-	    │   │   │   │   │  clear_poison_buffer.mcfunction
-	    │   │   │   │   │  combine_poison_buffer.mcfunction
-	    │   │   │   │   │  damage1_poison.mcfunction
-	    │   │   │   │   │  deal_damage.mcfunction
-	    │   │   │   │   │  deal_damage_mob.mcfunction
-	    │   │   │   │   │  hurt.mcfunction
-	    │   │   │   │   │  hurt_until_damage1.mcfunction
-	    │   │   │   │   │  kill.mcfunction
-	    │   │   │   │   │  remove_death_tag.mcfunction
-	    │   │   │   │   │  update_uid.mcfunction
-	    │   │   │   │   │
-	    │   │   │   │   └──enum
-	    │   │   │   │          12.mcfunction
-	    │   │   │   │          16.mcfunction
-	    │   │   │   │          2.mcfunction
-	    │   │   │   │          20.mcfunction
-	    │   │   │   │          24.mcfunction
-	    │   │   │   │          32.mcfunction
-	    │   │   │   │          4.mcfunction
-	    │   │   │   │          48.mcfunction
-	    │   │   │   │          6.mcfunction
-	    │   │   │   │          8.mcfunction
-	    │   │   │   │          96.mcfunction
-	    │   │   │   │
-	    │   │   │   └──main
-	    │   │   │          clean.mcfunction
-	    │   │   │          load.mcfunction
-	    │   │   │          tick.mcfunction
-	    │   │   │
-	    │   │   └──ui
-	    │   │       │  unload.mcfunction
-	    │   │       │
-	    │   │       └──setting
-	    │   │           ├──boss_difficulty
-	    │   │           │      default.mcfunction
-	    │   │           │      hard.mcfunction
-	    │   │           │      medium.mcfunction
-	    │   │           │
-	    │   │           └──guess_killer
-	    │   │                  disable.mcfunction
-	    │   │                  enable.mcfunction
-	    │   │
-	    │   └──tags
-	    │       └──entity_types
+	└─data
+	    ├─app
+	    │  └─functions
+	    │      ├─help
+	    │      │      damage.mcfunction
+	    │      │
+	    │      ├─setting
+	    │      │  ├─boss_difficulty
+	    │      │  │      default.mcfunction
+	    │      │  │      hard.mcfunction
+	    │      │  │      medium.mcfunction
+	    │      │  │
+	    │      │  └─guess_killer
+	    │      │          disable.mcfunction
+	    │      │          enable.mcfunction
+	    │      │
+	    │      └─unload
+	    │              damage.mcfunction
+	    │
+	    ├─damage
+	    │  ├─functions
+	    │  │  └─classes
+	    │  │      ├─damage
+	    │  │      │  │  apply_poison.mcfunction
+	    │  │      │  │  clear_damage_timer.mcfunction
+	    │  │      │  │  clear_poison_buffer.mcfunction
+	    │  │      │  │  combine_poison_buffer.mcfunction
+	    │  │      │  │  damage1_poison.mcfunction
+	    │  │      │  │  deal_damage.mcfunction
+	    │  │      │  │  deal_damage_mob.mcfunction
+	    │  │      │  │  hurt.mcfunction
+	    │  │      │  │  hurt_until_damage1.mcfunction
+	    │  │      │  │  kill.mcfunction
+	    │  │      │  │  remove_death_tag.mcfunction
+	    │  │      │  │  update_uid.mcfunction
+	    │  │      │  │
+	    │  │      │  └─enum
+	    │  │      │          12.mcfunction
+	    │  │      │          16.mcfunction
+	    │  │      │          2.mcfunction
+	    │  │      │          20.mcfunction
+	    │  │      │          24.mcfunction
+	    │  │      │          32.mcfunction
+	    │  │      │          4.mcfunction
+	    │  │      │          48.mcfunction
+	    │  │      │          6.mcfunction
+	    │  │      │          8.mcfunction
+	    │  │      │          96.mcfunction
+	    │  │      │
+	    │  │      └─main
+	    │  │              clean.mcfunction
+	    │  │              load.mcfunction
+	    │  │              tick.mcfunction
+	    │  │
+	    │  └─tags
+	    │      └─entity_types
 	    │              boss.json
 	    │              mob.json
 	    │              notmob.json
 	    │              undead.json
 	    │
-	    └──minecraft
-	        └──tags
-	            └──functions
-	                   load.json
-	                   tick.json
+	    └─minecraft
+		└─tags
+		    └─functions
+			    load.json
 
 
 # Incompactibility
