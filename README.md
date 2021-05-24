@@ -5,7 +5,7 @@ A minecraft datapack library for a custom damage system, including custom death 
 - [Abstract](#Abstract)
 - [Installation](#installation)
 - [Usage](#Usage)
-- [How it works](#Mechanism)
+- [How It Works](#How-It-Works)
 - [Project Tree](#Project-Tree)
 - [Incompactibility](#Incompactibility)
 - [Terms of Use](#Terms-of-Use)
@@ -96,7 +96,7 @@ Rules:
 2. If killing another player that the "team" score is not 0 and it's the same as you, you killed a teammate and your Kills score will be reduced by 1.
 3. If killed by custom damage but "hit_by" score is not assigned to the damage applyer's UID, the system guess you are killed by the nearest player(no team > different team > teammate).
 
-# Mechanism
+# How It Works
 * In minecraft command system (mcfunction), we can use:
 	* /data to modify the health of mobs directly, we use this method in this datapack, but player's Health nbt attribute is read-only.
 	 * /atrribute to modify the max health of player, theoratically it can be used to clamp the player's health to a specific lower amount. However, the max health attribute is only updated at the end of the tick, so we need two ticks for editing player's health, and any health boost in the first tick will be dropped, this method is not practical.
