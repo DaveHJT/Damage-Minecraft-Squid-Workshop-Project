@@ -54,8 +54,8 @@ Enable it by:
 | --- | :------ |
 | display this list | /function app:damage/help
 | clean up and disable the datapack | /function app:damage/unload
-| change the damage against boss | /function app:setting/boss_difficulty/...
-| enable/disable guessing unknown killer by nearest player | /function app:setting/guess_killer/...
+| change the damage against boss | /function app:settings/boss_difficulty/...
+| enable/disable guessing unknown killer by nearest player | /function app:settings/guess_killer/...
 
 ## Advanced
 Datapack developers might want to read this part.
@@ -126,7 +126,7 @@ See [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject/blob/mast
 	    │      ├─help
 	    │      │      damage.mcfunction
 	    │      │
-	    │      ├─setting
+	    │      ├─settings
 	    │      │  ├─boss_difficulty
 	    │      │  │      default.mcfunction
 	    │      │  │      hard.mcfunction
