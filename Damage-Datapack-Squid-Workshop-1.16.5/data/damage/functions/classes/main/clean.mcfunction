@@ -5,5 +5,5 @@ scoreboard objectives remove hit_by
 scoreboard objectives remove UID
 scoreboard objectives remove poison_buffer
 scoreboard objectives remove damage_timer
-scoreboard objectives remove damage_setting
+scoreboard objectives remove damage_settings
 

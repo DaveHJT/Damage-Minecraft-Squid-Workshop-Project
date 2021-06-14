@@ -8,7 +8,7 @@ scoreboard players operation hitter hit_by = @s hit_by
 execute as @a if score @s UID = hitter hit_by run tag @s add killer
 
 # if hitter unknown, guess killer by the nearest player(no team > different team > teammate)
-execute if score guess_killer damage_setting matches 1 if score @s hit_by matches 0 run tag @s add guess_killer
+execute if score guess_killer damage_settings matches 1 if score @s hit_by matches 0 run tag @s add guess_killer
 execute if entity @s[tag=guess_killer] run tag @p[tag=!dead,team=0] add killer
 execute if entity @s[tag=guess_killer] unless entity @a[tag=killer] as @a unless score @s team = @p[tag=guess_killer] team run tag @s add killer
 execute if entity @s[tag=guess_killer] unless entity @a[tag=killer] run tag @p[tag=!dead] add killer
