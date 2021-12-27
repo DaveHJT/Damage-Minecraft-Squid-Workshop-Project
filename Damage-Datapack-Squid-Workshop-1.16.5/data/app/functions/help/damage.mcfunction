@@ -1,1 +1,0 @@
-tellraw @a {"text":"display this list: /function damage:ui/help\nclean up and disable the datapack: /function damage:ui/unload\nchange the damage against boss: /function damage:ui/settings/boss_difficulty/...\nenable/disable gussing unknown killer by nearest player: /function damage:ui/settings/guess_killer/..."}
