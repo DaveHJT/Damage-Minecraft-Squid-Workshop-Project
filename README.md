@@ -75,6 +75,14 @@ When the damage score is added, you should do these to enable custom death messa
 2. Assign the damage taker's hit_by score by the damage applyer's UID(unique player ID created by this datapack)
 to identify the killer if the player is killed by this damage.
 
+eg. PLAYER1 is hit by PLAYER2 by grenade.
+
+	#sign name
+	scoreboard players operation PLAYER1 hit_by = PLAYER2 UID
+
+	#special tags
+	tag PLAYER1 add grenaded
+
 | Condition | Death Message |
 | --- | :------ |
 | default | @s was killed under @p[tag=killer]'s gunfire
