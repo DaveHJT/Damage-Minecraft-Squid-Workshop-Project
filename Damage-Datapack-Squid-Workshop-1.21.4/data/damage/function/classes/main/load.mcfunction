@@ -13,7 +13,7 @@ scoreboard objectives add team dummy
 scoreboard objectives add health dummy
 scoreboard objectives add hit_by dummy
 scoreboard objectives add poison_buffer dummy
-scoreboard objectives add damage_timer dummy 
+scoreboard objectives add damage_timer dummy
 
 # set up scoreboard constants
 scoreboard players set delay damage_timer 10
