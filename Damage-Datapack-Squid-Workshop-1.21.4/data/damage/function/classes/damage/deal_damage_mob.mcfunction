@@ -9,8 +9,8 @@
 execute if score boss_difficulty damage_settings matches 1 run scoreboard players operation @s[type=#damage:boss] damage /= medium damage
 execute if score boss_difficulty damage_settings matches 2 run scoreboard players operation @s[type=#damage:boss] damage /= hard damage
 
-execute store result storage damage:temp damage int 1 run scoreboard players get @s damage
-function damage:classes/damage/damage_command with storage damage:temp
+execute store result storage damage:storage damage int 1 run scoreboard players get @s damage
+function damage:classes/damage/damage_command with storage damage:storage
 
 # # kill
 # execute if score @s health <= @s damage run effect give @s[type=!#damage:undead] instant_damage 1 20 true
