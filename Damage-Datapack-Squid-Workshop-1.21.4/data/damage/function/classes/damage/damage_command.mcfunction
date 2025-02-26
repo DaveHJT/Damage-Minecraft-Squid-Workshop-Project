@@ -1,1 +1,1 @@
-$damage @s $(damage)
+$damage @s $(damage) from @s
