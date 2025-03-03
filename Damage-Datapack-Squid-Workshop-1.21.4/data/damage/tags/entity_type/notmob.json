@@ -20,7 +20,7 @@
 "minecraft:furnace_minecart",
 "minecraft:hopper_minecart",
 "minecraft:tnt_minecart",
-"minecraft:boat",
+"#minecraft:boat",
 "minecraft:end_crystal"
 ]
 }
